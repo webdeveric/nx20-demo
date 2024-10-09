@@ -7,6 +7,14 @@ on:
     types:
       - closed
 
+permissions:
+  packages: write
+  contents: write
+  issues: write
+  pull-requests: write
+  id-token: write
+  actions: read
+
 jobs:
   release:
     if: github.event.pull_request.merged == true
