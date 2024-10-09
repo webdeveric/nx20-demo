@@ -1,7 +1,9 @@
-import { common } from '@webdeveric/nx20-demo-common';
+import { common, helloWorld } from '@webdeveric/nx20-demo-common';
 
 export function demo(): string {
-  console.log(common());
-
   return `demo-${common()}`;
+}
+
+export function sayHi(): void {
+  helloWorld();
 }
