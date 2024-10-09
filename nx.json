@@ -43,11 +43,14 @@
   },
   "release": {
     "projectsRelationship": "independent",
-    "releaseTagPattern": "{projectName}/{version}",
+    "releaseTagPattern": "{projectName}/v{version}",
     "changelog": {
       "automaticFromRef": true,
-      "projectChangelogs": true,
-      "workspaceChangelog": {
+      "git": {
+        "commit": false
+      },
+      "projectChangelogs": {
+        "file": false,
         "createRelease": "github"
       }
     },
