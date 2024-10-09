@@ -38,3 +38,7 @@ export function isBoolean(input: unknown): input is boolean {
 export function isString(input: unknown): input is string {
   return typeof input === 'string';
 }
+
+export function isBigInt(input: unknown): input is bigint {
+  return typeof input === 'bigint';
+}
