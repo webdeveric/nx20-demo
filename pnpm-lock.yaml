@@ -44,9 +44,6 @@ importers:
       '@vitest/ui':
         specifier: ^1.6.0
         version: 1.6.0(vitest@1.6.0)
-      '@webdeveric/prettier-config':
-        specifier: ^0.3.0
-        version: 0.3.0(prettier@2.8.8)
       cspell:
         specifier: ^8.14.4
         version: 8.14.4
@@ -1651,11 +1648,6 @@ packages:
 
   '@vitest/utils@1.6.0':
     resolution: {integrity: sha512-21cPiuGMoMZwiOHa2i4LXkMkMkCGzA+MVFV70jRwHo95dL4x/ts5GZhML1QWuy7yfp3WzK3lRvZi3JnXTYqrBw==}
-
-  '@webdeveric/prettier-config@0.3.0':
-    resolution: {integrity: sha512-pI97Yboz+tUVt8TVnRNFos5FTPBQKSR/zrH/Qq+0XML9+U7fkhvD69wnUPdeNwoUM/UlrnxGva2MFpcqtti2Cw==}
-    peerDependencies:
-      prettier: '>=2.4.0'
 
   '@yarnpkg/lockfile@1.1.0':
     resolution: {integrity: sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==}
@@ -5916,10 +5908,6 @@ snapshots:
       estree-walker: 3.0.3
       loupe: 2.3.7
       pretty-format: 29.7.0
-
-  '@webdeveric/prettier-config@0.3.0(prettier@2.8.8)':
-    dependencies:
-      prettier: 2.8.8
 
   '@yarnpkg/lockfile@1.1.0': {}
 
