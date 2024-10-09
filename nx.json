@@ -45,7 +45,11 @@
     "projectsRelationship": "independent",
     "releaseTagPattern": "{projectName}/{version}",
     "changelog": {
-      "projectChangelogs": true
+      "automaticFromRef": true,
+      "projectChangelogs": true,
+      "workspaceChangelog": {
+        "createRelease": "github"
+      }
     },
     "version": {
       "conventionalCommits": true,
