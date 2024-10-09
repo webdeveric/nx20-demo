@@ -1,20 +1,21 @@
 import baseConfig from '../../eslint.config.js';
-import parser from 'jsonc-eslint-parser';
+// import parser from 'jsonc-eslint-parser';
 
 export default [
   ...baseConfig,
-  {
-    files: ['**/*.json'],
-    rules: {
-      '@nx/dependency-checks': [
-        'error',
-        {
-          ignoredFiles: ['{projectRoot}/eslint.config.{js,cjs,mjs}', '{projectRoot}/vite.config.{js,ts,mjs,mts}'],
-        },
-      ],
-    },
-    languageOptions: {
-      parser,
-    },
-  },
+  // This does not work well with PNPM's `workspace:*`
+  // {
+  //   files: ['**/*.json'],
+  //   rules: {
+  //     '@nx/dependency-checks': [
+  //       'error',
+  //       {
+  //         ignoredFiles: ['{projectRoot}/eslint.config.{js,cjs,mjs}', '{projectRoot}/vite.config.{js,ts,mjs,mts}'],
+  //       },
+  //     ],
+  //   },
+  //   languageOptions: {
+  //     parser,
+  //   },
+  // },
 ];
