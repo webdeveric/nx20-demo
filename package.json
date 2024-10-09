@@ -10,7 +10,6 @@
     "typecheck": "nx run-many -t typecheck",
     "lint": "nx run-many -t lint"
   },
-  "prettier": "@webdeveric/prettier-config",
   "devDependencies": {
     "@eslint/js": "^9.12.0",
     "@nx/eslint": "20.0.0",
@@ -24,14 +23,13 @@
     "@types/node": "22.0.0",
     "@vitest/coverage-v8": "^1.6.0",
     "@vitest/ui": "^1.6.0",
-    "@webdeveric/prettier-config": "^0.3.0",
     "cspell": "^8.14.4",
     "eslint": "^9.12.0",
     "eslint-config-prettier": "^9.1.0",
     "nx": "20.0.0",
     "prettier": "^2.8.8",
     "tslib": "^2.7.0",
-    "typescript": "~5.5.4",
+    "typescript": "~5.6.3",
     "typescript-eslint": "^8.8.1",
     "verdaccio": "^5.32.2",
     "vite": "^5.4.8",

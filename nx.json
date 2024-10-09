@@ -44,11 +44,81 @@
   "release": {
     "projectsRelationship": "independent",
     "releaseTagPattern": "{projectName}/v{version}",
+    "conventionalCommits": {
+      "types": {
+        "build": {
+          "semverBump": "none",
+          "changelog": {
+            "title": "Build System"
+          }
+        },
+        "ci": {
+          "semverBump": "none",
+          "changelog": {
+            "title": "Continuous Integration"
+          }
+        },
+        "chore": {
+          "semverBump": "none",
+          "changelog": {
+            "title": "Miscellaneous Chores"
+          }
+        },
+        "docs": {
+          "semverBump": "patch",
+          "changelog": {
+            "title": "Documentation Updates"
+          }
+        },
+        "feat": {
+          "semverBump": "minor",
+          "changelog": {
+            "title": "New Features"
+          }
+        },
+        "fix": {
+          "semverBump": "patch",
+          "changelog": {
+            "title": "Bug Fixes"
+          }
+        },
+        "perf": {
+          "semverBump": "patch",
+          "changelog": {
+            "title": "Performance Improvements"
+          }
+        },
+        "refactor": {
+          "semverBump": "patch",
+          "changelog": {
+            "title": "Code Refactoring"
+          }
+        },
+        "revert": {
+          "semverBump": "none",
+          "changelog": {
+            "title": "Reverts"
+          }
+        },
+        "style": {
+          "semverBump": "none",
+          "changelog": {
+            "title": "Code Style Changes"
+          }
+        },
+        "test": {
+          "semverBump": "none",
+          "changelog": {
+            "title": "Tests"
+          }
+        }
+      }
+    },
+    "git": {
+      "commit": false
+    },
     "changelog": {
       "automaticFromRef": true,
-      "git": {
-        "commit": false
-      },
       "projectChangelogs": {
         "file": false,
         "createRelease": "github"
