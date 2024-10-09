@@ -34,4 +34,6 @@ jobs:
         run: npx nx report
 
       - name: Create release
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx nx release --skip-publish
