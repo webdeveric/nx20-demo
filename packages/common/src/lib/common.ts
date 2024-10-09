@@ -30,3 +30,7 @@ export function* forever<T>(items: Iterable<T>): Generator<T> {
     yield* items;
   }
 }
+
+export function isBoolean(input: unknown): input is boolean {
+  return typeof input === 'boolean';
+}
