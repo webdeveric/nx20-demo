@@ -15,3 +15,18 @@ export function now(): number {
 export function getId(): string {
   return randomUUID();
 }
+
+/**
+ * Yield each item from the iterable forever.
+ *
+ * @example
+ * ```ts
+ * const users = ['Amy', 'Eric', 'Kobe', 'Andy'];
+ * console.log(Array.from(forever(users).take(10)));
+ * ```
+ */
+export function* forever<T>(items: Iterable<T>): Generator<T> {
+  while (true) {
+    yield* items;
+  }
+}
