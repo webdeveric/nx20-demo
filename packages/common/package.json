@@ -1,0 +1,28 @@
+{
+  "name": "@webdeveric/nx20-demo-common",
+  "version": "0.0.0",
+  "dependencies": {
+    "tslib": "^2.7.0"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo"
+  ],
+  "nx": {
+    "name": "common",
+    "targets": {
+      "test": {
+        "executor": "@nx/vite:test",
+        "outputs": [
+          "{options.reportsDirectory}"
+        ],
+        "options": {
+          "reportsDirectory": "{workspaceRoot}/coverage/{projectRoot}"
+        }
+      }
+    }
+  }
+}

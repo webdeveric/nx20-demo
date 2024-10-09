@@ -1,0 +1,35 @@
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
+
+jobs:
+  release:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+          # registry-url: https://registry.npmjs.org/
+
+      - name: Installing dependencies
+        run: pnpm install
+
+      - name: Print Environment Info
+        run: npx nx report
+
+      - name: Create release
+        run: npx nx release --skip-publish --dry-run
