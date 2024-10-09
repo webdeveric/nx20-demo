@@ -34,3 +34,7 @@ export function* forever<T>(items: Iterable<T>): Generator<T> {
 export function isBoolean(input: unknown): input is boolean {
   return typeof input === 'boolean';
 }
+
+export function isString(input: unknown): input is string {
+  return typeof input === 'string';
+}
