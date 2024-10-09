@@ -7,3 +7,7 @@ export function demo(): string {
 export function sayHi(): void {
   helloWorld();
 }
+
+export function whatYearIsIt(): void {
+  console.log(`The current year is ${new Date().getFullYear()}`);
+}
