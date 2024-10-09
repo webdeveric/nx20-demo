@@ -21,7 +21,7 @@
     "@swc-node/register": "~1.9.2",
     "@swc/core": "~1.5.29",
     "@swc/helpers": "~0.5.13",
-    "@types/node": "18.16.9",
+    "@types/node": "22.0.0",
     "@vitest/coverage-v8": "^1.6.0",
     "@vitest/ui": "^1.6.0",
     "@webdeveric/prettier-config": "^0.3.0",
@@ -33,7 +33,7 @@
     "tslib": "^2.7.0",
     "typescript": "~5.5.4",
     "typescript-eslint": "^8.8.1",
-    "verdaccio": "^6.0.0",
+    "verdaccio": "^5.32.2",
     "vite": "^5.4.8",
     "vitest": "^1.6.0"
   },
