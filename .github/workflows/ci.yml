@@ -43,4 +43,4 @@ jobs:
         uses: nrwl/nx-set-shas@v4
 
       - name: Nx affected targets
-        run: npx nx affected -t lint test typecheck build
+        run: npx nx affected -t lint test typecheck build --parallel=3
