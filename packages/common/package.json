@@ -7,13 +7,28 @@
   "dependencies": {
     "tslib": "^2.7.0"
   },
-  "type": "module",
-  "main": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
   "files": [
     "dist",
     "!**/*.tsbuildinfo"
   ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./lib": {
+      "types": "./dist/lib/index.d.ts",
+      "import": "./dist/lib/index.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js"
+    },
+    "./package.json": "./package.json"
+  },
   "nx": {
     "name": "common",
     "targets": {
