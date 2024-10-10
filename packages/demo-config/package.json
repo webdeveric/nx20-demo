@@ -1,0 +1,20 @@
+{
+  "name": "@webdeveric/demo-config",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./config.json",
+  "files": [
+    "./config.json"
+  ],
+  "nx": {
+    "name": "demo-config",
+    "targets": {
+      "build": {
+        "executor": "nx:noop"
+      },
+      "lint": {
+        "executor": "nx:noop"
+      }
+    }
+  }
+}
