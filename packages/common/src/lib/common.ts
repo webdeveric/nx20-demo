@@ -54,3 +54,7 @@ export function isUndefined(input: unknown): input is undefined {
 export function isNull(input: unknown): input is null {
   return input === null;
 }
+
+export function isSymbol(input: unknown): input is symbol {
+  return typeof input === 'symbol';
+}
