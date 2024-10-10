@@ -1,6 +1,17 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["Buildable", "nrwl", "nvmrc", "tsbuildinfo", "typecheck", "webdeveric"],
-  "ignorePaths": [".verdaccio", "dist/"]
+  "words": [
+    "Buildable",
+    "fregante",
+    "nrwl",
+    "nvmrc",
+    "tsbuildinfo",
+    "typecheck",
+    "webdeveric"
+  ],
+  "ignorePaths": [
+    ".verdaccio",
+    "dist/"
+  ]
 }

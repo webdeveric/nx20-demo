@@ -46,3 +46,7 @@ export function isNumber(input: unknown): input is number {
 export function isBigInt(input: unknown): input is bigint {
   return typeof input === 'bigint';
 }
+
+export function isUndefined(input: unknown): input is undefined {
+  return typeof input === 'undefined';
+}
