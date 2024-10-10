@@ -50,3 +50,7 @@ export function isBigInt(input: unknown): input is bigint {
 export function isUndefined(input: unknown): input is undefined {
   return typeof input === 'undefined';
 }
+
+export function isNull(input: unknown): input is null {
+  return input === null;
+}
