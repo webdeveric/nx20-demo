@@ -1,6 +1,9 @@
 {
   "name": "@webdeveric/nx20-demo-common",
   "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "tslib": "^2.7.0"
   },
