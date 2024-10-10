@@ -6,6 +6,7 @@ export function common(): string {
 
 export function helloWorld(): void {
   console.log('Hello, World!');
+  console.log('How are you today?');
 }
 
 export function now(): number {
