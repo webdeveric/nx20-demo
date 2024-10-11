@@ -1,0 +1,28 @@
+{
+  "name": "repo-root",
+  "includedScripts": [],
+  "targets": {
+    "build": {
+      "executor": "nx:noop"
+    },
+    "typecheck": {
+      "cache": true,
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "tsc --build tsconfig.configs.json --verbose --pretty --noEmit"
+        ],
+        "cwd": "{projectRoot}",
+        "forwardAllArgs": false
+      }
+    },
+    "local-registry": {
+      "executor": "@nx/js:verdaccio",
+      "options": {
+        "port": 4873,
+        "config": ".verdaccio/config.yml",
+        "storage": "tmp/local-registry/storage"
+      }
+    }
+  }
+}

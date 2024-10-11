@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "tsBuildInfoFile": "./dist/out-tsc/tsconfig.configs.tsbuildinfo"
+  },
+  "include": [
+    "./.*.js",
+    "./.*.cjs",
+    "./*.js",
+    "./*.mjs",
+    "./*.cjs",
+    "./*.ts",
+    "./*.mts",
+    "./*.cts"
+  ]
+}
