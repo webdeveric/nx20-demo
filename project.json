@@ -5,6 +5,9 @@
     "build": {
       "executor": "nx:noop"
     },
+    "lint": {
+      "executor": "nx:noop"
+    },
     "typecheck": {
       "cache": true,
       "executor": "nx:run-commands",
