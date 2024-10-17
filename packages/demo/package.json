@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "@webdeveric/nx20-demo-common": "workspace:*",
-    "tslib": "^2.7.0"
+    "tslib": "^2.8.0"
   },
   "type": "module",
   "main": "./dist/index.js",
