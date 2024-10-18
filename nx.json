@@ -134,7 +134,7 @@
       "preVersionCommand": "pnpm dlx nx run-many -t build",
       "generatorOptions": {
         "skipLockFileUpdate": true,
-        "fallbackCurrentVersionResolver": "disk"
+        "currentVersionResolver": "git-tag"
       }
     }
   }
