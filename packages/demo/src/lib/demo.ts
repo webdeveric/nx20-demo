@@ -11,3 +11,7 @@ export function sayHi(): void {
 export function whatYearIsIt(): void {
   console.log(`The current year is ${new Date().getFullYear()}`);
 }
+
+export function yetAnotherFunction(): void {
+  console.log('This is another function');
+}
