@@ -7,3 +7,7 @@ export function demo(): string {
 export function sayHi(): void {
   helloWorld();
 }
+
+export function sayBye(): void {
+  console.log('Bye');
+}
