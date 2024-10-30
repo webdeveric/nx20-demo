@@ -45,12 +45,6 @@
       "options": {
         "reportsDirectory": "{workspaceRoot}/coverage/{projectRoot}"
       }
-    },
-    "nx-release-publish": {
-      "executor": "@nx/js:release-publish",
-      "options": {
-        "packageRoot": "{projectRoot}"
-      }
     }
   },
   "release": {
