@@ -1,5 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "neverConnectToCloud": true,
   "defaultBase": "origin/main",
   "cli": {
     "packageManager": "pnpm",
@@ -44,9 +45,16 @@
       "options": {
         "reportsDirectory": "{workspaceRoot}/coverage/{projectRoot}"
       }
+    },
+    "nx-release-publish": {
+      "executor": "@nx/js:release-publish",
+      "options": {
+        "packageRoot": "{projectRoot}"
+      }
     }
   },
   "release": {
+    "projects": ["packages/*"],
     "projectsRelationship": "independent",
     "releaseTagPattern": "{projectName}/v{version}",
     "conventionalCommits": {
@@ -122,18 +130,21 @@
     "git": {
       "commit": false
     },
+    "version": {
+      "preVersionCommand": "pnpm build",
+      "generatorOptions": {
+        "updateDependents": false,
+        "skipLockFileUpdate": true,
+        "currentVersionResolver": "git-tag",
+        "fallbackCurrentVersionResolver": "disk",
+        "specifierSource": "conventional-commits"
+      }
+    },
     "changelog": {
       "automaticFromRef": true,
       "projectChangelogs": {
         "file": false,
         "createRelease": "github"
-      }
-    },
-    "version": {
-      "preVersionCommand": "pnpm dlx nx run-many -t build",
-      "generatorOptions": {
-        "skipLockFileUpdate": true,
-        "currentVersionResolver": "git-tag"
       }
     }
   }
