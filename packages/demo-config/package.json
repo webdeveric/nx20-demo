@@ -1,5 +1,6 @@
 {
   "name": "@webdeveric/demo-config",
+  "version": "0.0.0-development",
   "publishConfig": {
     "access": "public"
   },

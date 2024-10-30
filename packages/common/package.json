@@ -1,5 +1,6 @@
 {
   "name": "@webdeveric/nx20-demo-common",
+  "version": "0.0.0-development",
   "publishConfig": {
     "access": "public"
   },
