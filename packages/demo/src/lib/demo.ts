@@ -15,3 +15,7 @@ export function whatYearIsIt(): void {
 export function yetAnotherFunction(): void {
   console.log('This is another function');
 }
+
+export function someOtherFunction(): void {
+  console.log('Some other function');
+}
