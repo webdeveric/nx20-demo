@@ -2,15 +2,5 @@
   "extends": "./tsconfig.base.json",
   "compileOnSave": false,
   "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.configs.json"
-    },
-    {
-      "path": "./packages/common"
-    },
-    {
-      "path": "./packages/demo"
-    }
-  ]
+  "references": [{ "path": "./packages/common" }, { "path": "./packages/demo" }]
 }

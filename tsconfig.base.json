@@ -20,6 +20,7 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
     "noUnusedLocals": true,
     "pretty": true,
     "removeComments": false,
@@ -29,6 +30,6 @@
     "sourceMap": false,
     "strict": true,
     "target": "es2022",
-    "verbatimModuleSyntax": false
+    "verbatimModuleSyntax": true
   }
 }

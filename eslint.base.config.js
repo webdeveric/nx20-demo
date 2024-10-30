@@ -1,7 +1,12 @@
-import baseConfig from './eslint.base.config.js';
+import nxEslint from '@nx/eslint-plugin';
 
 export default [
-  ...baseConfig,
+  // @ts-expect-error no types
+  ...nxEslint.configs['flat/base'],
+  // @ts-expect-error no types
+  ...nxEslint.configs['flat/typescript'],
+  // @ts-expect-error no types
+  ...nxEslint.configs['flat/javascript'],
   {
     ignores: ['**/dist'],
   },
