@@ -11,3 +11,7 @@ export function sayHi(): void {
 export function sayBye(): void {
   console.log('Bye');
 }
+
+export function printEnv(): void {
+  console.table(process.env);
+}
