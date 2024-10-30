@@ -129,8 +129,7 @@
       "generatorOptions": {
         "updateDependents": false,
         "skipLockFileUpdate": true,
-        "currentVersionResolver": "git-tag",
-        "fallbackCurrentVersionResolver": "disk",
+        "currentVersionResolver": "registry",
         "specifierSource": "conventional-commits"
       }
     },
