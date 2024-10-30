@@ -7,15 +7,3 @@ export function demo(): string {
 export function sayHi(): void {
   helloWorld();
 }
-
-export function whatYearIsIt(): void {
-  console.log(`The current year is ${new Date().getFullYear()}`);
-}
-
-export function yetAnotherFunction(): void {
-  console.log('This is another function');
-}
-
-export function someOtherFunction(): void {
-  console.log('Some other function');
-}
