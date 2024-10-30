@@ -1,4 +1,4 @@
-import { randomUUID } from 'node:crypto';
+import { randomUUID, randomInt } from 'node:crypto';
 
 export function common(): string {
   return 'common';
@@ -11,6 +11,16 @@ export function helloWorld(): void {
 
 export function now(): number {
   return Date.now();
+}
+
+export function randomFrom<T>(items: [T, ...T[]]): T;
+
+export function randomFrom(items: []): undefined;
+
+export function randomFrom<T>(items: T[]): T | undefined;
+
+export function randomFrom<T>(items: T[]): T | undefined {
+  return items.at(randomInt(items.length));
 }
 
 export function getId(): string {
