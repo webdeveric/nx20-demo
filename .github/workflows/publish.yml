@@ -33,10 +33,10 @@ jobs:
         run: pnpm install
 
       - name: Print Environment Info
-        run: npx nx report
+        run: pnpm exec nx report
 
       - name: Publish packages
-        run: npx nx release publish --dry-run
+        run: pnpm exec nx release publish --dry-run
         shell: bash
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
