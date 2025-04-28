@@ -11,8 +11,5 @@
     "typecheck",
     "webdeveric"
   ],
-  "ignorePaths": [
-    ".verdaccio",
-    "dist/"
-  ]
+  "ignorePaths": [".verdaccio", "dist", "node_modules"]
 }
