@@ -1,10 +1,12 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "neverConnectToCloud": true,
-  "defaultBase": "origin/main",
   "cli": {
-    "packageManager": "pnpm",
-    "analytics": false
+    "packageManager": "pnpm"
+  },
+  "workspaceLayout": {
+    "appsDir": "./apps",
+    "libsDir": "./libs"
   },
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
@@ -121,24 +123,24 @@
         }
       }
     },
-    "git": {
-      "commit": false
-    },
-    "version": {
-      "preVersionCommand": "pnpm build",
-      "generatorOptions": {
-        "updateDependents": false,
-        "skipLockFileUpdate": true,
-        "currentVersionResolver": "registry",
-        "specifierSource": "conventional-commits"
-      }
-    },
     "changelog": {
+      "git": {
+        "commit": false
+      },
       "automaticFromRef": true,
       "projectChangelogs": {
         "file": false,
         "createRelease": "github"
       }
+    },
+    "version": {
+      "useLegacyVersioning": false,
+      "currentVersionResolver": "git-tag",
+      "specifierSource": "conventional-commits",
+      "git": {
+        "commit": false
+      },
+      "preVersionCommand": "pnpm exec nx run-many -t build --batch"
     }
   }
 }
