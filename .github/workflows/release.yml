@@ -37,7 +37,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
 
       - name: Installing dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
