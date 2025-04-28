@@ -1,6 +1,7 @@
 import baseConfig from '../../eslint.config.js';
 import parser from 'jsonc-eslint-parser';
 
+/** @type { import("eslint").Linter.Config[] } */
 export default [
   ...baseConfig,
   {
@@ -11,7 +12,7 @@ export default [
         {
           ignoredFiles: [
             '{projectRoot}/eslint.config.{js,cjs,mjs}',
-            '{projectRoot}/vite.config.{js,ts,mjs,mts}',
+            '{projectRoot}/vitest.config.mts',
           ],
         },
       ],
