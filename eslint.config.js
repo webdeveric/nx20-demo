@@ -1,7 +1,13 @@
-import baseConfig from './eslint.base.config.js';
+import eslint from '@eslint/js';
+import nxEslint from '@nx/eslint-plugin';
+import tseslint from 'typescript-eslint';
 
-export default [
-  ...baseConfig,
+export default tseslint.config(
+  eslint.configs.recommended,
+  tseslint.configs.recommended,
+  nxEslint.configs['flat/base'],
+  nxEslint.configs['flat/typescript'],
+  nxEslint.configs['flat/javascript'],
   {
     ignores: ['**/dist'],
   },
@@ -12,7 +18,7 @@ export default [
         'error',
         {
           enforceBuildableLibDependency: true,
-          allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?js$'],
+          allow: ['^.*/eslint(\\.base)?\\.config\\.js$'],
           depConstraints: [
             {
               sourceTag: '*',
@@ -28,4 +34,4 @@ export default [
     // Override or add rules here
     rules: {},
   },
-];
+);
