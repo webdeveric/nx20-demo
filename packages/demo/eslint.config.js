@@ -1,6 +1,7 @@
 import baseConfig from '../../eslint.config.js';
 // import parser from 'jsonc-eslint-parser';
 
+/** @type { import("eslint").Linter.Config[] } */
 export default [
   ...baseConfig,
   // This does not work well with PNPM's `workspace:*`

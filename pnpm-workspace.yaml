@@ -1,4 +1,12 @@
 packages:
-  - 'apps/*'
-  - 'libs/*'
-  - 'packages/*'
+  - apps/*
+  - libs/*
+  - packages/*
+ignoredBuiltDependencies:
+  - core-js
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - '@swc/core'
+  - esbuild
+  - nx
+  - sharp

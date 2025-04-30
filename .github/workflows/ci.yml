@@ -34,22 +34,18 @@ jobs:
           cache: 'pnpm'
 
       - name: Installing dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Check spelling
         run: pnpm spellcheck
 
       - name: Nx set SHAs
         uses: nrwl/nx-set-shas@v4
+        with:
+          main-branch-name: ${{ github.base_ref }}
 
-      - name: Lint
-        run: npx nx affected -t lint
+      - name: typecheck, lint, build, test
+        run: pnpm exec nx affected -t typecheck lint build test --batch --parallel 4
 
-      - name: Typecheck
-        run: npx nx affected -t typecheck
-
-      - name: Build
-        run: npx nx affected -t build
-
-      - name: Test
-        run: npx nx affected -t test
+      - name: Version (dry-run)
+        run: pnpm exec nx release version --dry-run

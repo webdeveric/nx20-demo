@@ -3,6 +3,7 @@
   "language": "en",
   "words": [
     "Buildable",
+    "esbuild",
     "fregante",
     "nrwl",
     "nvmrc",
@@ -10,8 +11,5 @@
     "typecheck",
     "webdeveric"
   ],
-  "ignorePaths": [
-    ".verdaccio",
-    "dist/"
-  ]
+  "ignorePaths": [".verdaccio", "dist", "node_modules"]
 }
